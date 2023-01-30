@@ -14,7 +14,7 @@ export class RequestsComponent implements OnInit {
 
   ngOnInit(): void {}
   
-  displayedColumns: string[] = ['id', 'employee_name', 'start_date', 'end_date','treated_by','leave_type','request_status'];
+  displayedColumns: string[] = ['id', 'employee_name', 'start_date', 'end_date','treated_by','leave_type','request_status','action'];
   dataSource = new MatTableDataSource<Requests>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
 

@@ -15,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderComponent } from './Components/shared/header/header.component';
@@ -32,6 +34,7 @@ import { EmployeeDetailsComponent } from './Components/popups/employee-details/e
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewRequestComponent } from './Components/popups/new-request/new-request.component';
+import { BaseComponent } from './Layout/base/base.component';
 
 
 @NgModule({
@@ -49,7 +52,8 @@ import { NewRequestComponent } from './Components/popups/new-request/new-request
     LogOutComponent,
     ConfirmationComponent,
     EmployeeDetailsComponent,
-    NewRequestComponent
+    NewRequestComponent,
+    BaseComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +72,8 @@ import { NewRequestComponent } from './Components/popups/new-request/new-request
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatCardModule,
+    MatSnackBarModule,
     BrowserAnimationsModule
   ],
   providers: [MatDatepickerModule],

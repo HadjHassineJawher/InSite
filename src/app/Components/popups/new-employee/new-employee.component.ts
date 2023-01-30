@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-new-employee',
@@ -9,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class NewEmployeeComponent implements OnInit {
   form: FormGroup ;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder,private _snackBar: MatSnackBar) { 
     this.form = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -18,12 +19,21 @@ export class NewEmployeeComponent implements OnInit {
       departement: ['', Validators.required],
       manager: ['', Validators.required],
       country: ['', Validators.required]
-    });
+    })
   }
  
   ngOnInit(): void {}
+
+  openSnackBar() {
+    this._snackBar.open('New employee Saved Successfully',' Close' ,{
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+    });
+  }
+
   Submit(){
-    console.log(this.form.value)
+    console.log(this.form.value);
+    this.openSnackBar()
   }
 
 }

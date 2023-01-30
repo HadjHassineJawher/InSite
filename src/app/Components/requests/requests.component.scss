@@ -3,12 +3,11 @@ table {
     height: 100%;
 }
 
-.bar {
-    padding: 1vh;
-    margin-bottom: 1vh;
+mat-form-field {
+  margin-left: 50%;
+  margin-right: auto;
+  width: 50%;
 }
-
-.search_field{
-  margin-left: 2vh;
-  margin-right: 2vh;
+p{
+  color: rgb(244 180 0);
 }

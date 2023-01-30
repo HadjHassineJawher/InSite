@@ -1,3 +1,59 @@
 table{
     width: 100%;
 }
+
+mat-form-field{
+    display: block;
+    width: 35%;
+    margin-left: auto;
+}
+
+button{
+    display: block;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.flex-parent{
+    display: flex;
+}
+
+.flex-child{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    color: rgb(14, 76, 192);
+}
+
+span{
+    color: rgb(14, 76, 192);
+    letter-spacing: 1px;
+}
+
+img {
+    border-radius: 50%;
+    width: 150px;
+
+}
+
+.flex-parent-element {
+    display: flex;
+    max-height: 40vh;
+}
+
+.child_elements{
+    margin-top:3vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
+}
+
+.flex-child-element {
+    margin: 1px;
+}
+
+.validated{
+    color: rgb(20, 97, 71);
+}

@@ -21,7 +21,6 @@ export class InformationComponent implements OnInit {
   displayedColumns: string[] = ['id', 'start_date', 'end_date','treated_by','leave_type','request_status'];
   dataSource = new MatTableDataSource<Requests>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
-
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }

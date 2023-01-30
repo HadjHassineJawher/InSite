@@ -1,50 +1,67 @@
 <h2>Add  a New Employee </h2>
+<h6>Long-term success depends on both employees and customers.</h6>
 <form [formGroup]="form">
-    <mat-form-field>
-      <input matInput placeholder="Name" formControlName="name">
-      <mat-error *ngIf="form.get('name').hasError('required')">
-        Name is required
-      </mat-error>
-    </mat-form-field>
-<br>
-    <mat-form-field>
+  <div class="flex-parent-element">
+    <div class="flex-child-element ">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Name" formControlName="name">
+        <mat-error *ngIf="form.get('name').hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="flex-child-element ">
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Function" formControlName="function">
         <mat-error *ngIf="form.get('function').hasError('required')">
           Function is required
         </mat-error>
       </mat-form-field>
-<br>
-      <mat-form-field>
+    </div>
+  </div>
+
+  <div class="flex-parent-element">
+    <div class="flex-child-element ">
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Phone" formControlName="phone">
         <mat-error *ngIf="form.get('phone').hasError('required')">
           Phone is required
         </mat-error>
       </mat-form-field>
-<br>
-      <mat-form-field>
+  
+    </div>
+    <div class="flex-child-element">
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Departement" formControlName="departement">
         <mat-error *ngIf="form.get('departement').hasError('required')">
           Departement is required
         </mat-error>
       </mat-form-field>
-<br>
-      <mat-form-field>
-        <input matInput placeholder="Manager" formControlName="manager">
-        <mat-error *ngIf="form.get('manager').hasError('required')">
-          Manager is required
+      
+    </div>
+  </div>
+
+  <div class="flex-parent-element">
+    <div class="flex-child-element">
+          <mat-form-field appearance="outline">
+      <input matInput placeholder="Manager" formControlName="manager">
+      <mat-error *ngIf="form.get('manager').hasError('required')">
+        Manager is required
+      </mat-error>
+    </mat-form-field>
+    </div>
+    <div class="flex-child-element">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Country" formControlName="country">
+        <mat-error *ngIf="form.get('country').hasError('required')">
+          Country is required
         </mat-error>
       </mat-form-field>
-  <br>
-
-  <mat-form-field>
-    <input matInput placeholder="Country" formControlName="country">
-    <mat-error *ngIf="form.get('country').hasError('required')">
-      Country is required
-    </mat-error>
-  </mat-form-field>
-<br>
-
-    <mat-form-field>
+      
+    </div>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
       <input matInput placeholder="Email" formControlName="email">
       <mat-error *ngIf="form.get('email').hasError('required')">
         Email is required
@@ -53,9 +70,16 @@
       <mat-error *ngIf="form.get('email').hasError('email')">
         Email is invalid
       </mat-error>
-    </mat-form-field>
-  <br>
-    <button mat-raised-button color="warn">Cancel</button>
-    <button mat-raised-button color="primary" (click)="Submit()">Submit</button>
+    </mat-form-field> 
+  </div>
+
+    <div class="flex-parent-element">
+      <div class="flex-child-element">
+        <button mat-stroked-button color="warn">Cancel</button>
+      </div>
+      <div class="flex-child-element">
+        <button mat-stroked-button color="primary" (click)="Submit()">Submit</button>
+      </div>
+    </div>
   </form>
   

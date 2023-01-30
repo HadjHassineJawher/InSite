@@ -24,7 +24,7 @@ export class EmployeesComponent implements OnInit {
   }
 
   open_dialog_for_new_employee() {
-    this.dialog.open(NewEmployeeComponent);
+    this.dialog.open(NewEmployeeComponent,{width:'70vh'});
   }
 }
 

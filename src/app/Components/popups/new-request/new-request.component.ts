@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-new-request',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewRequestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -31,7 +32,13 @@ export class NewRequestComponent implements OnInit {
     const leaveDays = diffTime / (1000 * 60 * 60 * 24) + 1;
     return Math.floor(leaveDays);
   }
-
+  openSnackBar() {
+    this._snackBar.open('Demande Saved Successfully',' Close' ,{
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+    });
+  }
+  // snackBarRef = this._snackBar.open('Message archived');
   Submit(){
     const difference = this.date_difference(this.selected_start_date, this.selected_end_date);
     const formData={
@@ -42,5 +49,6 @@ export class NewRequestComponent implements OnInit {
       status:"In Progress"
     }
    console.log(formData)
+   this.openSnackBar()
   }
 }
